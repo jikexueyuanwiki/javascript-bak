@@ -22,8 +22,8 @@ ECMAScript，描述了该语言的语法和基本对象。
 ### 2.1. JavaScript导论 
 JavaScript是一种脚本语言，其源代码在发往客户端运行之前不需经过编译，而是将文本格式的字符代码发送给浏览器由浏览器解释运行。  
 直译语言的弱点是安全性较差，而且在JavaScript中，如果一条运行不了，那么下面的语言也无法运行。而其解决办法就是于使用`try{}catch(){}`︰		
-![GitHub trycatch]		
-(/Users/jiroyuan/Documents/javascript-wiki/trycatch.png)                  
+![Image of trycatch]		
+(https://github.com/sammulyuan/javascript/blob/master/trycatch.png)                  
 ### 2.2. 基本特点         
 ### 2.3. 了解工具和应用
 ## 3. JavaScript核心语法
