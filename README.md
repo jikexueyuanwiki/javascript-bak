@@ -23,11 +23,48 @@ ECMAScript，描述了该语言的语法和基本对象。
 JavaScript是一种脚本语言，其源代码在发往客户端运行之前不需经过编译，而是将文本格式的字符代码发送给浏览器由浏览器解释运行。  
 直译语言的弱点是安全性较差，而且在JavaScript中，如果一条运行不了，那么下面的语言也无法运行。而其解决办法就是于使用`try{}catch(){}`︰		
 ![Image of trycatch]		
-(https://github.com/sammulyuan/javascript/blob/master/trycatch.png)                  
-### 2.2. 基本特点         
+(https://github.com/sammulyuan/javascript/blob/master/trycatch.png)  
+
+1. Javascript被归类为直译语言，因为目前主流的引擎都是每次运行时加载代码并解译。		
+2. V8是将所有代码解译后再开始运行，其他引擎则是逐行解译（SpiderMonkey会将解译过的指令暂存，以提高性能，称为实时编译），但由于V8的核心部份多数用Javascript撰写（而SpiderMonkey是用C++），因此在不同的测试上，两者性能互有优劣。		
+3. 与其相对应的是编译语言，例如C语言，以编译语言编写的程序在运行之前，必须经过编译，将代码编译为机器码，再加以运行。  
+             
+### 2.2. 基本特点 
+
+1. 是一种解释性脚本语言（代码不进行预编译）。
+2. 主要用来向HTML（标准通用标记语言下的一个应用）页面添加交互行为。
+3. 可以直接嵌入HTML页面，但写成单独的js文件有利于结构和行为的分离。
+4. 跨平台特性，在绝大多数浏览器的支持下，可以在多种平台下运行（如Windows、Linux、Mac、Android、iOS等）。  
+      
 ### 2.3. 了解工具和应用
+
+- TestSwarm：是Mozilla实验室推出的一个开源项目，它旨在为开发者提供在多个浏览器版本上快速轻松测试自己JavaScript代码的方法。
+- Minimee：在网络上，速度是很重要的，Minimee能帮助你将CSS和JavaScript文件进行自动压缩和打包。
+- Doctor JS：Doctor JS 是一款帮你分析 JavaScript 代码的工具，测试你的代码在多态、原型、异常和回调方面写得怎么样。
+- Remy Sharp’s JSConsole：一个在线的 JavaScript 控制台工具，对于测试、调试和演示非常有用。
+- JavaScript Library Boilerplate：JavaScript Library Boilerplate 帮助你随时随地创建自己的 JavaScript 库。
+- Jsdoc-toolkit：JsDoc Toolkit 是一款辅助工具，你只需要根据约定在 JavaScript 代码中添加相应的注释，它就可以根据这些注释来自动生成API文档。
+- Jasmine  BDD for your JavaScript：Jasmine 是一个有名的javascript单元测试框架，它是独立的“行为驱动开发”框架。
+- ObfuscateJS: JavaScript compressor：一款 JavaScript 混淆工具，去除空白和注释，重命名变量等。
+- PEG.js：PEG.js 是一个JavaScript的表达式语法解析器，它使您能够轻松地建立复杂的数据或计算机程序语言的快速分析器。
+- JSONView：JSONView 是一款帮助你在浏览器中查看JSON文档的Firefox插件。
+- JSonduit：JSonduit 是一个将网页内容转换为 JSON 格式订阅器的工具。
+- Jsplumb：JsPlumb 为开发者提供了可视化链接元素到页面的方法，可以结合jQuery、MooTools 和 YUI3使用。
+- Helma:Helma 是一个用来开发快速、稳定的Web应用程序的开源框架，它使用JavaScript 来作为服务端脚本环境，从而可以省略编译周期。
+- HTML + JSON Report：一款将 JSON 数据转换为可读性更高的HTML格式内容的在线工具。
+- JSON Editor：这个编辑器可以帮助你方便的编辑 JSON 字符串。
+
 ## 3. JavaScript核心语法
 ### 3.1. 了解JavaScript代码的结构
+- 通过在网页或工具中加入`<Script>…</Script>`标记JavaScript的开始和结束，将JavaScript代码放到`<Script>…</Script>`之间：
+
+```
+<SCRIPT LANGUAGE="JavaScript">
+   <!--
+     ......
+   //-->
+</SCRIPT>
+```
 ### 3.2. JavaScript基本    
 ### 3.3. JavaScript 创建变量    
 ### 3.4. JavaScript 运算符    
