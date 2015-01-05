@@ -155,7 +155,77 @@ var carname;
 %= | x%=y | x=x%y | x=0
 ^= | x^=y | x=x^y按位异或，不同为1，true，相同为0，false | x=15
 
-### 3.5 JavaScript 比较         
+**JavaScript 字符串运算符**		
+用于字符串值连结的运算符（+）将两个字符串值连结在一起。		
+例如：“我的”+“计算机”就返回“我的计算机”		
+如果把数字与字符串相加，结果将成为字符串。
+
+```
+txt1="What a very";
+txt2="nice day";
+txt3=txt1+txt2;
+txt3 包含的值是 "What a verynice day"。
+```
+要想在两个字符串之间增加空格，需要把空格插入一个字符串之中：
+
+```
+txt1="What a very ";
+txt2="nice day";
+txt3=txt1+txt2;
+```
+或者把空格插入表达式中：
+
+```
+txt1="What a very";
+txt2="nice day";
+txt3=txt1+" "+txt2;
+```
+在以上语句执行后，变量 txt3 包含的值是："What a very nice day"
+
+- 取子集函数：`substring(index1,index2)`		
+- 取长度属性：`length`		
+- 取字符串中的某一个字符的函数：`charAt(index)`
+- 查找字符在字符串中的位置：(函数要注意大小写)		
+	从左往右找`indexOf(string)`		
+    从右往左找`lastIndexOf(string)`
+          
+### 3.5 JavaScript 比较  		
+**JavaScript 比较运算符**		
+比较它的操作对象并返回一个逻辑值（true 或 false）。	
+操作对象即可以是数字也可以是字符串值。		
+给定 x=1 和 y=2，下面的表格解释了比较运算符： 
+	
+运算符 | 描述 | 标注 | 实例 | 结果 		
+----- | ---- | --- | ---- | ----   
+== | 等号 | 如果操作对象相等返回true，如果两个操作对象不为同一类型，javascript尝试转换它们为一个适当的类型 | 3 == x  	“3”==y	3 ==‘3’ | false false true  
+!= | 不等于 | 同上面相反，两个操作水箱不相等返回true | x != 4	y !=2 | true	false
+=== | 绝对相等 | 如果操作对象相等并且类型相等返回true | 3===‘3’	x ===1 | false	true
+!== | 绝对不等 | 同上面相反，如果操作对象或不是同一类型返回true | 3!== ‘3’	x !== 1 | true	false
+\> | 大于 | 如果左边的操作对象大于右边操作对象返回true | x > y | false
+\>= | 大于或等于 | 如果左边的操作对象大于或等于右边的操作对象返回true | y >= x | true
+< | 小于 | 如果左边的操作对象小于右边操作对象返回true | x < y | true
+<= | 小于或等于 | 如果左边的操作对象小于或等于右边的操作对象返回true | y <= x | false
+		
+**JavaScript 逻辑运算符**		
+返回一个布尔值	
+	
+运算符 | 用法 | 描述		
+----- | --- | ----		
+&& | 表达式1&&表达式2 | 逻辑与，如果两个表达式都为真，&&返回true，否则返回false
+\|\| | 表达式1\|\|表达式2 | 逻辑或，如果两个表达式都为真，\|\|返回true，其中一个表达式为真，\|\|返回true，否则返回false
+
+**JavaScript 特殊运算符：条件运算符**
+
+*其语法为：条件?A:B*		
+如果条件为真，结果值为 A，否则为 B	
+	
+```
+name=(age==“22”)?"Jessica":"Dear ";		
+如果变量 age 中的值是 “22"，则向变量 name 赋值 "Jessica "，否则赋值 "Dear"。
+```
+**运算符的优先级**		
+是复合运算进行计算时的先后顺序，对于所有的二元运算都是从左到右进行计算，用圆括号来忽略优先级：
+
 ### 3.6 JavaScript 条件语句和循环
 #### 3.6.1 JavaScript If...Else
 #### 3.6.2 JavaScript switch 语句
