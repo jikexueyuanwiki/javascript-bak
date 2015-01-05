@@ -96,7 +96,6 @@ JavaScript是一种脚本语言，其源代码在发往客户端运行之前不�
 	*提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。*		
 	虽然JavaScript可以不需定义即可直接使用变量，但不建议这么做。
 2. 变量的作用范围：
-
  	1. 在一个函数（function）之外定义一个变量，那它叫作全局变量
 	2. 在 function 内部定义的变量则叫局部变量，它只作用于函数内
 	
@@ -118,7 +117,7 @@ job="CEO";
 - 在计算机程序中，经常会声明无值的变量。未使用值来声明的变量，其值实际上是 undefined。
 - 在执行过以下语句后，变量 name 的值将是 undefined：`var name`;
 
-3. 重新声明 JavaScript 变量		
+**重新声明 JavaScript 变量**		
 如果重新声明 JavaScript 变量，该变量的值不会丢失：	
 在以下两条语句执行后，变量 name 的值依然是 “Hello"：	
 
@@ -127,7 +126,11 @@ var carname="Volvo";
 var carname;
 ```
 
-### 3.4 JavaScript 运算符    
+### 3.4 JavaScript 运算符  
+**JavaScript算数运算符**		
+运算符|描述|标注|例子|结果		 
+--------|--------|--------|--------|--------	
++|加|二元运算符，返回操作数相加结果|2+3|5
 ### 3.5 JavaScript 比较         
 ### 3.6 JavaScript 条件语句和循环
 #### 3.6.1 JavaScript If...Else
