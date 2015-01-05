@@ -114,7 +114,9 @@ JavaScript是一种脚本语言，其源代码在发往客户端运行之前不�
 var name="Hello",		
 age=22，		
 job="CEO";
-	```
+```
+6. 在计算机程序中，经常会声明无值的变量。未使用值来声明的变量，其值实际上是 undefined。
+7. 在执行过以下语句后，变量 name 的值将是 undefined：`var name`;
 
 ### 3.4 JavaScript 运算符    
 ### 3.5 JavaScript 比较         
