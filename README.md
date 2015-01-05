@@ -198,7 +198,7 @@ txt3=txt1+" "+txt2;
 运算符 | 描述 | 标注 | 实例 | 结果 		
 ----- | ---- | --- | ---- | ----   
 == | 等号 | 如果操作对象相等返回true，如果两个操作对象不为同一类型，javascript尝试转换它们为一个适当的类型 | 3 == x  	“3”== y	3== ‘3’ | false false true  
-!= | 不等于 | 同上面相反，两个操作水箱不相等返回true | x!=4	y != 2 | true	false
+!= | 不等于 | 同上面相反，两个操作水箱不相等返回true | x!= 4	y != 2 | true	false
 === | 绝对相等 | 如果操作对象相等并且类型相等返回true | 3===‘3’	x===1 | false	true
 !== | 绝对不等 | 同上面相反，如果操作对象或不是同一类型返回true | 3!==  ‘3’	 x!== 1 | true	false
 \> | 大于 | 如果左边的操作对象大于右边操作对象返回true | x > y | false
@@ -226,8 +226,48 @@ name=(age==“22”)?"Jessica":"Dear ";
 **运算符的优先级**		
 是复合运算进行计算时的先后顺序，对于所有的二元运算都是从左到右进行计算，用圆括号来忽略优先级：
 
+![Image of youxianji]		
+(https://github.com/sammulyuan/javascript/blob/master/youxianji.png)
+
 ### 3.6 JavaScript 条件语句和循环
 #### 3.6.1 JavaScript If...Else
+
+- If 语句：只有当指定条件为 true 时，该语句才会执行代码。
+
+```
+if (条件)
+{
+    只有当条件为 true 时执行的代码
+}
+注意：请使用小写的 if。使用大写字母（IF）会生成 JavaScript 错误！
+```
+- If...else 语句：如果条件为 true，则执行 if 段语句，若为 false 则执行 else 段语句，用法如下：
+
+```
+if (条件) {
+      当条件为 true 时执行的代码
+}else {
+      当条件不为 true 时执行的代码
+} 
+```
+*条件可以是任何结果值为 true 或 false 的 JavaScript 表达式，语句可以是任何可执行的 JavaScript 语句*		
+它还可以任意层地被嵌套，如果条件语句后面是单条语句，那么就不需要大括号 {}。请看下例代码：
+
+```javascript
+<SCRIPT>
+function checkData () {
+if (document.form1.three.value.length == 3)
+       alert("OK!");
+else {
+       alert("请输入三个字符，" + document.form1.three.value + "无效！");
+       return false；
+}
+</SCRIPT>
+<form name="form1"><center>
+<input type="text" name="three" onChange="checkData()">
+</center>
+</form>
+```
 #### 3.6.2 JavaScript switch 语句
 #### 3.6.3 JavaScript for 循环
 #### 3.6.4 JavaScript while 循环
