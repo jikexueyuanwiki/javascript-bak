@@ -489,14 +489,142 @@ JavaScript 变量的生命期从它们被声明的时间开始。
 **局部变量会在函数运行以后被删除。**		
 **全局变量会在页面关闭后被删除。**	
 	
-> 如果把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。这条语句：`carname="Volvo";`		
+如果把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。这条语句：`carname="Volvo";`		
 将声明一个全局变量 carname，即使它在函数内执行。
 
 #### 3.7.6 JavaScript 函数调用
+函数在定义好之后，不能自动执行，需要进行调用		
+调用方式：		
+1. 在`<script>`标签内调用  
+
+```javascript
+<script>
+function demo(){
+   var a=10;
+   var b=20;
+   var sum=a+b;
+   alert(sum);
+}
+demo();//调用函数
+</script> 
+```		
+2. 在HTML文件中调用
+
+```javascript
+<form>
+<input type=“button” value=“按钮” onclick=“demo()”>
+</form>
+或<button onclick=“demo()”>按钮</button>
+```
 #### 3.7.7 JavaScript 闭包
+**解释**： 一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因而这些变量也是该表达式的一部分。		
+**闭包的特点**：
+		
+1. 作为一个函数变量的一个引用，当函数返回时，其处于激活状态。	
+2. 一个闭包就是当一个函数返回时，一个没有释放资源的栈区。
+
+**原因**：javascript允许使用内部函数---即函数定义和函数表达式位于另一个函数的函数体内。而且，这些内部函数可以访问它们所在的外部函数中声明的所有局部变量、参数和声明的其他内部函数。		
+当其中一个这样的内部函数在包含它们的外部函数之外被调用时，就会形成闭包。		
+
+```javascript
+例：
+function closure(){
+    var str = "I'm a part variable.";
+    return function(){
+    alert(str);
+    }
+}
+var fObj = closure();
+fObj();
+```		
+在上面代码中，str是定义在函数closure中局部变量，若str在closure函数调用完成以后不能再被访问，则在函数执行完成后str将被释放。	
+但是由于函数closure返回了一个内部函数，且这个返回的函数引用了str变量，导致了str可能会在closure函数执行完成以后还会被引用，所以str所占用的资源不会被回收。这样closure就形成了一个闭包。
 ### 3.8 JavaScript 输出
+可以使用 `document.getElementById(id)` 方法从 JavaScript 访问某个 HTML 元素；	
+	
+- 通过指定的 id 来访问 HTML 元素，并改变其内容：
+
+```javascript		
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My First Web Page</h1>
+<p id="demo">My First Paragraph</p>
+<script>               document.getElementById("demo").innerHTML="My First JavaScript";
+</script>
+</body>
+</html>
+```
+
+- 直接把 `<p>`元素写到 HTML 文档输出中：
+
+```javascript		
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My First Web Page</h1>
+<script>
+document.write("<p>My First JavaScript</p>");
+</script>
+</body>
+</html>
+```		
+*注意：document.write() 仅仅向文档输出写内容，如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。*
 ### 3.9 JavaScript 语句
+
+JavaScript 语句向浏览器发出的命令，语句的作用是告诉浏览器该做什么；	
+	
+- **分号** 		
+用于分隔 JavaScript 语句。		
+通常我们在每条可执行的语句结尾添加分号。		
+使用分号的另一用处是在一行中编写多条语句。
+		
+*提示：也可能看到不带有分号的案例，在 JavaScript 中，用分号来结束语句是可选的。*	
+	
+- **JavaScript 代码**
+JavaScript 代码（或者只有 JavaScript）是 JavaScript 语句的序列。浏览器会按照编写顺序来执行每条语句。		
+- **JavaScript 代码块**		
+JavaScript 语句通过代码块的形式进行组合。		
+块由左花括号开始，由右花括号结束。块的作用是使语句序列一起执行。	
+*JavaScript 函数是将语句组合在块中的典型例子。*
+
+- **空格**		
+JavaScript 会忽略多余的空格。你可以向脚本添加空格，来提高其可读性。
+- **对代码行进行折行**		
+可以在文本字符串中使用反斜杠对代码行进行换行。		
+注意：这样不可以 
+
+		document.write \
+		("Hello World!");
 ### 3.10 JavaScript 数据类型
+
+1. 整数类型		
+一个整数可以是十进制、十六进制和八进制数，一个十进制数由一串数字序列组成，它的第一个数字不能为0；如38，-25，+120，74286等都是十进制整数。		
+如果第一个数字为0，则表示它是一个八进制数；如0，012，0377，04056等都是八进制整数，对应的十进制整数依次为0，10，255和2094。		
+若为0x，则表示它为一个十六进制数；如0x0，0X25，0x1ff，0x30CA等都是十六进制整数，对应的十进制整数依次为0，37，511和4298。
+2. 浮点数类型		
+浮点数的例子：
+`3.1415,  -3.1E12,  0.1e12 和 2E-12`	
+一个浮点数必须包含一个数字，一个小数点或“e”（或“E”）。
+3. 布尔类型		
+Boolean 类型有两种值：true 和 false
+4. 字符串类型		
+字符串是若干封装在双引号（“）或单引号（'）内的字符。如下：
+`
+"fish"
+'fish'
+"5467"
+"a line"
+`		
+可以在字符串中使用引号，只要不匹配包围字符串的引号即可：
+`"He is called 'Bill'";`
+
+5. 对象类型		
+用new声明一个新的对象	
+	
+		var currentDay = new Date();		
+		alert(currentDay.getDay());
+
 ### 3.11 JavaScript 注释
 ### 3.12 JavaScript 保留字关键字
 ### 3.13 JavaScript 验证
