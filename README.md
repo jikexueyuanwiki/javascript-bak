@@ -550,7 +550,8 @@ fObj();
 <body>
 <h1>My First Web Page</h1>
 <p id="demo">My First Paragraph</p>
-<script>               document.getElementById("demo").innerHTML="My First JavaScript";
+<script>
+document.getElementById("demo").innerHTML="My First JavaScript";
 </script>
 </body>
 </html>
@@ -596,6 +597,7 @@ JavaScript 会忽略多余的空格。你可以向脚本添加空格，来提高
 
 		document.write \
 		("Hello World!");
+		
 ### 3.10 JavaScript 数据类型
 
 1. 整数类型		
@@ -609,7 +611,7 @@ JavaScript 会忽略多余的空格。你可以向脚本添加空格，来提高
 3. 布尔类型		
 Boolean 类型有两种值：true 和 false
 4. 字符串类型		
-字符串是若干封装在双引号（“）或单引号（'）内的字符。如下：
+字符串是若干封装在双引号（“）或单引号（'）内的字符。如下：	
 `
 "fish"
 'fish'
@@ -624,6 +626,20 @@ Boolean 类型有两种值：true 和 false
 	
 		var currentDay = new Date();		
 		alert(currentDay.getDay());
+对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 `(name : value)`来定义。属性由逗号分隔：
+
+		var person={firstname:"Bill", lastname:"Gates", id:5566};
+空格和折行无关紧要。声明可横跨多行：
+
+		var person={
+		firstname : "Bill",
+		lastname  : "Gates",
+		id        :  5566
+		};
+对象属性有两种寻址方式：
+
+		name=person.lastname;
+		name=person["lastname"];
 
 ### 3.11 JavaScript 注释
 ### 3.12 JavaScript 保留字关键字
