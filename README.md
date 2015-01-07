@@ -14,9 +14,9 @@ JavaScript 是世界上最流行的编程语言。
 7. 基于Node.js技术进行服务器端编程。  
    
 ### 1.2 组成部分				
-ECMAScript，描述了该语言的语法和基本对象。	
-文档对象模型（DOM），描述处理网页内容的方法和接口。	
-浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口。   
+**ECMAScript，**描述了该语言的语法和基本对象。	
+**文档对象模型（DOM），**描述处理网页内容的方法和接口。	
+**浏览器对象模型（BOM），**描述与浏览器进行交互的方法和接口。   
  
 ## 2 开始
 ### 2.1 JavaScript导论 
@@ -38,21 +38,21 @@ JavaScript是一种脚本语言，其源代码在发往客户端运行之前不�
       
 ### 2.3 了解工具和应用
 
-- TestSwarm：是Mozilla实验室推出的一个开源项目，它旨在为开发者提供在多个浏览器版本上快速轻松测试自己JavaScript代码的方法。
-- Minimee：在网络上，速度是很重要的，Minimee能帮助你将CSS和JavaScript文件进行自动压缩和打包。
-- Doctor JS：Doctor JS 是一款帮你分析 JavaScript 代码的工具，测试你的代码在多态、原型、异常和回调方面写得怎么样。
-- Remy Sharp’s JSConsole：一个在线的 JavaScript 控制台工具，对于测试、调试和演示非常有用。
-- JavaScript Library Boilerplate：JavaScript Library Boilerplate 帮助你随时随地创建自己的 JavaScript 库。
-- Jsdoc-toolkit：JsDoc Toolkit 是一款辅助工具，你只需要根据约定在 JavaScript 代码中添加相应的注释，它就可以根据这些注释来自动生成API文档。
-- Jasmine  BDD for your JavaScript：Jasmine 是一个有名的javascript单元测试框架，它是独立的“行为驱动开发”框架。
-- ObfuscateJS: JavaScript compressor：一款 JavaScript 混淆工具，去除空白和注释，重命名变量等。
-- PEG.js：PEG.js 是一个JavaScript的表达式语法解析器，它使您能够轻松地建立复杂的数据或计算机程序语言的快速分析器。
-- JSONView：JSONView 是一款帮助你在浏览器中查看JSON文档的Firefox插件。
-- JSonduit：JSonduit 是一个将网页内容转换为 JSON 格式订阅器的工具。
-- Jsplumb：JsPlumb 为开发者提供了可视化链接元素到页面的方法，可以结合jQuery、MooTools 和 YUI3使用。
-- Helma:Helma 是一个用来开发快速、稳定的Web应用程序的开源框架，它使用JavaScript 来作为服务端脚本环境，从而可以省略编译周期。
-- HTML + JSON Report：一款将 JSON 数据转换为可读性更高的HTML格式内容的在线工具。
-- JSON Editor：这个编辑器可以帮助你方便的编辑 JSON 字符串。
+- **TestSwarm：**是Mozilla实验室推出的一个开源项目，它旨在为开发者提供在多个浏览器版本上快速轻松测试自己JavaScript代码的方法。
+- **Minimee：**在网络上，速度是很重要的，Minimee能帮助你将CSS和JavaScript文件进行自动压缩和打包。
+- **Doctor JS：**Doctor JS 是一款帮你分析 JavaScript 代码的工具，测试你的代码在多态、原型、异常和回调方面写得怎么样。
+- **Remy Sharp’s JSConsole：**一个在线的 JavaScript 控制台工具，对于测试、调试和演示非常有用。
+- **JavaScript Library Boilerplate：**JavaScript Library Boilerplate 帮助你随时随地创建自己的 JavaScript 库。
+- **Jsdoc-toolkit：**JsDoc Toolkit 是一款辅助工具，你只需要根据约定在 JavaScript 代码中添加相应的注释，它就可以根据这些注释来自动生成API文档。
+- **Jasmine  BDD for your JavaScript：**Jasmine 是一个有名的javascript单元测试框架，它是独立的“行为驱动开发”框架。
+- **ObfuscateJS: JavaScript compressor：**一款 JavaScript 混淆工具，去除空白和注释，重命名变量等。
+- **PEG.js：**PEG.js 是一个JavaScript的表达式语法解析器，它使您能够轻松地建立复杂的数据或计算机程序语言的快速分析器。
+- **JSONView：**JSONView 是一款帮助你在浏览器中查看JSON文档的Firefox插件。
+- **JSonduit：**JSonduit 是一个将网页内容转换为 JSON 格式订阅器的工具。
+- **Jsplumb：**JsPlumb 为开发者提供了可视化链接元素到页面的方法，可以结合jQuery、MooTools 和 YUI3使用。
+- **Helma:** Helma 是一个用来开发快速、稳定的Web应用程序的开源框架，它使用JavaScript 来作为服务端脚本环境，从而可以省略编译周期。
+- **HTML + JSON Report：**一款将 JSON 数据转换为可读性更高的HTML格式内容的在线工具。
+- **JSON Editor：**这个编辑器可以帮助你方便的编辑 JSON 字符串。
 
 ## 3 JavaScript核心语法
 ### 3.1 了解JavaScript代码的结构
@@ -93,7 +93,7 @@ JavaScript是一种脚本语言，其源代码在发往客户端运行之前不�
     3. 变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）
     4. 变量名称对大小写敏感（y 和 Y 是不同的变量）  
     
-	*提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。*		
+	> 提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。		
 	虽然JavaScript可以不需定义即可直接使用变量，但不建议这么做。
 2. 变量的作用范围：
  	1. 在一个函数（function）之外定义一个变量，那它叫作全局变量
@@ -103,11 +103,12 @@ JavaScript是一种脚本语言，其源代码在发往客户端运行之前不�
 
 在 JavaScript 中创建变量通常称为“声明”变量。
 		
-- 使用 var 关键词来声明变量：`var name`;		
+- **使用 var 关键词来声明变量：**`var name`;		
 - 变量声明之后，该变量是空的（它没有值）。如需向变量赋值，请使用等号：`carname=“Hello"`;	
-- 也可以在声明变量时对其赋值：`var name=“Hello”`；	
-- 一条语句，多个变量:语句以 var 开头，并使用逗号分隔变量即可：`var name="Hello", age=22, job="CEO"`;
-- 声明也可横跨多行：
+- **也可以在声明变量时对其赋值：**`var name=“Hello”`；	
+- **一条语句，多个变量：**语句以 var 开头，并使用逗号分隔变量即可：`var name="Hello", age=22, job="CEO"`;
+- **声明也可横跨多行：**
+例：
 
 ```javascript				
 var name="Hello",		
@@ -119,7 +120,8 @@ job="CEO";
 
 **重新声明 JavaScript 变量**		
 如果重新声明 JavaScript 变量，该变量的值不会丢失：	
-在以下两条语句执行后，变量 name 的值依然是 “Hello"：	
+在以下两条语句执行后，变量 name 的值依然是 “Hello"：
+例：	
 
 ```javascript
 var carname="Volvo";		
@@ -159,7 +161,7 @@ var carname;
 用于字符串值连结的运算符（+）将两个字符串值连结在一起。		
 例如：“我的”+“计算机”就返回“我的计算机”		
 如果把数字与字符串相加，结果将成为字符串。
-
+例：			
 ```
 txt1="What a very";
 txt2="nice day";
@@ -167,14 +169,14 @@ txt3=txt1+txt2;
 txt3 包含的值是 "What a verynice day"。
 ```
 要想在两个字符串之间增加空格，需要把空格插入一个字符串之中：
-
+例：		
 ```
 txt1="What a very ";
 txt2="nice day";
 txt3=txt1+txt2;
 ```
 或者把空格插入表达式中：
-
+例：		
 ```
 txt1="What a very";
 txt2="nice day";
@@ -216,9 +218,9 @@ txt3=txt1+" "+txt2;
 
 **JavaScript 特殊运算符：条件运算符**
 
-*其语法为：条件?A:B*		
+其语法为：条件?A:B			
 如果条件为真，结果值为 A，否则为 B	
-	
+例：			
 ```
 name=(age==“22”)?"Jessica":"Dear ";		
 如果变量 age 中的值是 “22"，则向变量 name 赋值 "Jessica "，否则赋值 "Dear"。
@@ -232,7 +234,7 @@ name=(age==“22”)?"Jessica":"Dear ";
 ### 3.6 JavaScript 条件语句和循环
 #### 3.6.1 JavaScript If...Else
 
-- If 语句：只有当指定条件为 true 时，该语句才会执行代码。
+- **If 语句：**只有当指定条件为 true 时，该语句才会执行代码。
 
 ```
 if (条件)
@@ -241,7 +243,7 @@ if (条件)
 }
 注意：请使用小写的 if。使用大写字母（IF）会生成 JavaScript 错误！
 ```
-- If...else 语句：如果条件为 true，则执行 if 段语句，若为 false 则执行 else 段语句，用法如下：
+- **If...else 语句：**如果条件为 true，则执行 if 段语句，若为 false 则执行 else 段语句，用法如下：
 
 ```
 if (条件) {
@@ -250,9 +252,11 @@ if (条件) {
       当条件不为 true 时执行的代码
 } 
 ```
-*条件可以是任何结果值为 true 或 false 的 JavaScript 表达式，语句可以是任何可执行的 JavaScript 语句*		
-它还可以任意层地被嵌套，如果条件语句后面是单条语句，那么就不需要大括号 {}。请看下例代码：
 
+> 条件可以是任何结果值为 true 或 false 的 JavaScript 表达式，语句可以是任何可执行的 JavaScript 语句	
+		
+它还可以任意层地被嵌套，如果条件语句后面是单条语句，那么就不需要大括号 {}。请看下例代码：
+例：		
 ```javascript
 <SCRIPT>
 function checkData () {
@@ -268,7 +272,8 @@ else {
 </center>
 </form>
 ```
-- If...else if...else 语句：使用 if....else if...else 语句来选择多个代码块之一来执行
+
+- **If...else if...else 语句：**使用 if....else if...else 语句来选择多个代码块之一来执行
 
 ```
  if (条件 1)
@@ -287,7 +292,7 @@ else
 
 #### 3.6.2 JavaScript switch 语句
 
-- switch 语句：switch 语句允许程序给表达式求值，并用 case 标记来匹配表达式可能的值；如果匹配成立，程序将执行相应的语句，用法如下：
+- **switch 语句：**switch 语句允许程序给表达式求值，并用 case 标记来匹配表达式可能的值；如果匹配成立，程序将执行相应的语句，用法如下：
 
 ```
 switch (表达式){
@@ -300,14 +305,14 @@ default : 语句;
 }
 ```
 
-- 通过 switch 语句执行流程如下：
+- **通过 switch 语句执行流程如下：**
 	1. 求表达式的值并依次序查看 case，直到找到一个匹配；
 	2. 如果 case 的值等于表达式的值，则执行它相应的语句；继续执行，直到遇到一个 break 语句，或者 switch 语句结束。		
 这意味着如果没有使用一个 break 语句，则多个 case 块被执行。
 	3. 如果没有 case 等于表达式的值，则跳转到 default；如果没有 default 情况，则跳转到最后一步；继续执行紧接 switch 代码块末尾的语句。
 	
+例：			
 ```	javascript
-例：
 var day=new Date().getDay();					
 switch (day){					
 case 0:					
@@ -336,24 +341,25 @@ case 6:
 
 #### 3.6.3 JavaScript for 循环
 
-- for 语句：一个 for 语句进行循环直到条件为 false，用法如下：
+- **for 语句：**一个 for 语句进行循环直到条件为 false，用法如下：
 
 ```
 for ([初始表达式]; [条件]; [增量表达式]) {
      被执行的代码块；
 }
 ```
-**初始表达式**： 在循环（代码块）开始前执行，该表达式只在执行循环前被执行一次；		
-*初始表达式是可选的，也就是说不使用也可以，可以在初始表达式中初始化任意（或者多个）值*			
+**初始表达式：** 在循环（代码块）开始前执行，该表达式只在执行循环前被执行一次；	
+	
+> 初始表达式是可选的，也就是说不使用也可以，可以在初始表达式中初始化任意（或者多个）值		
 								
-**条件**： 定义运行循环（代码块）的条件，是一个 Boolean 表达式；如果是 true，则语句被执行，如果为 false，则循环结束；		
+**条件：** 定义运行循环（代码块）的条件，是一个 Boolean 表达式；如果是 true，则语句被执行，如果为 false，则循环结束；		
 *如果省略了条件，那么必须在循环内提供 break。否则循环就无法停下来。这样有可能令浏览器崩溃*		
 
-**增量表达式**： 在循环（代码块）已被执行之后执行；	
+**增量表达式：** 在循环（代码块）已被执行之后执行；	
 *增量表达式也是可选的。增量可以是负数 (i--)，或者更大 (i=i+15)。可以省略（比如当循环内部有相应的代码时）*	
 	
-**被执行的代码块**： 为 true 时，要执行的语句，它可以是复合(多条)语句。
-如下例：
+**被执行的代码块：** 为 true 时，要执行的语句，它可以是复合(多条)语句。
+例：
 
 ```javascript
 myarray = new Array();
@@ -363,10 +369,10 @@ for (i = 0; i < 10; i++)
 }
 ```
 
-- For/In 循环：JavaScript for/in 语句循环遍历对象的属性：
+- **For/In 循环：**JavaScript for/in 语句循环遍历对象的属性：
 
-```javascript
 例:
+```javascript
 var person={fname:"John",lname:"Doe",age:25};
 for (x in person)
 {
@@ -376,7 +382,7 @@ for (x in person)
 
 #### 3.6.4 JavaScript while 循环
 
-- while 循环：While 循环会在指定条件为真时循环执行代码块，执行一个语句，直到指定的条件为 false。
+- **while 循环：**While 循环会在指定条件为真时循环执行代码块，执行一个语句，直到指定的条件为 false。
 
 ```
 while (条件)
@@ -384,23 +390,25 @@ while (条件)
    需要执行的代码
 }
 ```
-*该语句与 do...while 语句不同的是，它将在语句执行开始检查条件是否为 true，如是 false，它将根本不会执行下面的语句*
 
-- do...while 语句：do/while 循环是 while 循环的变体。该循环会执行一次代码块，在检查条件是否为真之前，然后如果条件为真的话，就会重复这个循环。用法如下：
+> 该语句与 do...while 语句不同的是，它将在语句执行开始检查条件是否为 true，如是 false，它将根本不会执行下面的语句
+
+- **do...while 语句：**do/while 循环是 while 循环的变体。该循环会执行一次代码块，在检查条件是否为真之前，然后如果条件为真的话，就会重复这个循环。用法如下：
 
 ```
 do {
     需要执行的代码;
 } while (条件)
 ```
-*首先执行一个语句块，然后重复循环的执行该语句块，直到条件表达式等于 false*
+
+> 首先执行一个语句块，然后重复循环的执行该语句块，直到条件表达式等于 false
 
 #### 3.6.5 JavaScript Break 和 Continue 语句
-- break 语句可用于跳出循环		
+- **break 语句：**可用于跳出循环		
 break 语句跳出循环后，会继续执行该循环之后的代码（如果有的话）
 
-```javascript
 例:
+```javascript
 for (i=0;i<10;i++)
 {
   if (i==3) break;
@@ -408,10 +416,10 @@ for (i=0;i<10;i++)
 }
 ```
 
-- Continue 语句： continue 语句中断循环中的迭代，如果出现了指定的条件，然后继续循环中的下一个迭代。 
+- **Continue 语句：** continue 语句中断循环中的迭代，如果出现了指定的条件，然后继续循环中的下一个迭代。 
 
-``` javascript
 例:
+``` javascript
 <script>		
 function myFunction(){		
 	var x="",i=0;		
@@ -427,7 +435,7 @@ function myFunction(){
 输出后会跳过5执行		
 **continue 语句**（带有或不带标签引用）只能用在循环中。	
 **break 语句**（不带标签引用），只能用在循环或 switch 中。	
-*通过标签引用，break 语句可用于跳出任何 JavaScript 代码块*
+> 通过标签引用，break 语句可用于跳出任何 JavaScript 代码块
 
 ### 3.7 JavaScript函数和创建函数
 #### 3.7.1 了解函数的用途
@@ -443,14 +451,14 @@ function 函数名（参数列表）
 利用function来定义一个函数
 ```
 
-- **函数名**——调用函数时通过函数名进行调用。		
+- **函数名：**调用函数时通过函数名进行调用。		
 对于函数的命名，一般应该使用能够描述函数功能的单词进行描述，往往也可以使用多个单词组合进行命名，这样能够提高脚本的可读性。
-- **参数列表**——参数列表是可选的，在必要的时候；可以使用参数列表向函数传递一些参数，以便在函数中可以使用这些参数。
-- **代码块**——代码块中的代码包含在一对大括号中，通过代码块的执行完成函数的功能，如果需要返回一个值给调用函数的语句，应该在代码块中使用return语句。
+- **参数列表：**参数列表是可选的，在必要的时候；可以使用参数列表向函数传递一些参数，以便在函数中可以使用这些参数。
+- **代码块：**代码块中的代码包含在一对大括号中，通过代码块的执行完成函数的功能，如果需要返回一个值给调用函数的语句，应该在代码块中使用return语句。
 
 #### 3.7.3 JavaScript 函数参数
 
-- 调用带参数的函数：在调用函数时，可以向其传递值，这些值被称为参数。	
+- **调用带参数的函数：**在调用函数时，可以向其传递值，这些值被称为参数。	
 这些参数可以在函数中使用。可以发送任意多的参数，由逗号 (,) 分隔：
 `myFunction(argument1,argument2)`		
 当您声明函数时，请把参数作为变量来声明：
@@ -473,18 +481,19 @@ function myFunction()
    return x;
 }
 ```
-上面的函数会返回值 5。		
-*注释：整个 JavaScript 并不会停止执行，仅仅是函数。JavaScript 将继续执行代码，从调用函数的地方。*
+上面的函数会返回值 5。	
+	
+> 注释：整个 JavaScript 并不会停止执行，仅仅是函数。JavaScript 将继续执行代码，从调用函数的地方。
 
 #### 3.7.5 局部变量和全局变量
 
-- 局部 JavaScript 变量		
+- **局部 JavaScript 变量**	
 在 JavaScript 函数内部声明的变量（使用 var）是局部变量，所以只能在函数内部访问它（该变量的作用域是局部的）。			
 可以在不同的函数中使用名称相同的局部变量，因为只有声明过该变量的函数才能识别出该变量。			
 只要函数运行完毕，本地变量就会被删除。
-- 全局 JavaScript 变量		
+- **全局 JavaScript 变量**	
 在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它。
-- JavaScript 变量的生存期
+- **JavaScript 变量的生存期**
 JavaScript 变量的生命期从它们被声明的时间开始。		
 **局部变量会在函数运行以后被删除。**		
 **全局变量会在页面关闭后被删除。**	
@@ -496,7 +505,7 @@ JavaScript 变量的生命期从它们被声明的时间开始。
 函数在定义好之后，不能自动执行，需要进行调用		
 调用方式：		
 1. 在`<script>`标签内调用  
-
+例：		
 ```javascript
 <script>
 function demo(){
@@ -510,6 +519,7 @@ demo();//调用函数
 ```		
 2. 在HTML文件中调用
 
+例：		
 ```javascript
 <form>
 <input type=“button” value=“按钮” onclick=“demo()”>
@@ -517,17 +527,17 @@ demo();//调用函数
 或<button onclick=“demo()”>按钮</button>
 ```
 #### 3.7.7 JavaScript 闭包
-**解释**： 一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因而这些变量也是该表达式的一部分。		
-**闭包的特点**：
+**解释：** 一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因而这些变量也是该表达式的一部分。		
+**闭包的特点：**
 		
 1. 作为一个函数变量的一个引用，当函数返回时，其处于激活状态。	
 2. 一个闭包就是当一个函数返回时，一个没有释放资源的栈区。
 
-**原因**：javascript允许使用内部函数---即函数定义和函数表达式位于另一个函数的函数体内。而且，这些内部函数可以访问它们所在的外部函数中声明的所有局部变量、参数和声明的其他内部函数。		
-当其中一个这样的内部函数在包含它们的外部函数之外被调用时，就会形成闭包。		
-
+**原因：**javascript允许使用内部函数---即函数定义和函数表达式位于另一个函数的函数体内。而且，这些内部函数可以访问它们所在的外部函数中声明的所有局部变量、参数和声明的其他内部函数。		
+当其中一个这样的内部函数在包含它们的外部函数之外被调用时，就会形成闭包。	
+	
+例：		
 ```javascript
-例：
 function closure(){
     var str = "I'm a part variable.";
     return function(){
@@ -543,7 +553,7 @@ fObj();
 可以使用 `document.getElementById(id)` 方法从 JavaScript 访问某个 HTML 元素；	
 	
 - 通过指定的 id 来访问 HTML 元素，并改变其内容：
-
+例：		
 ```javascript		
 <!DOCTYPE html>
 <html>
@@ -558,7 +568,7 @@ document.getElementById("demo").innerHTML="My First JavaScript";
 ```
 
 - 直接把 `<p>`元素写到 HTML 文档输出中：
-
+例：		
 ```javascript		
 <!DOCTYPE html>
 <html>
@@ -569,8 +579,10 @@ document.write("<p>My First JavaScript</p>");
 </script>
 </body>
 </html>
-```		
-*注意：document.write() 仅仅向文档输出写内容，如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。*
+```	
+	
+> 注意：document.write() 仅仅向文档输出写内容，如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。
+
 ### 3.9 JavaScript 语句
 
 JavaScript 语句向浏览器发出的命令，语句的作用是告诉浏览器该做什么；	
@@ -580,14 +592,14 @@ JavaScript 语句向浏览器发出的命令，语句的作用是告诉浏览器
 通常我们在每条可执行的语句结尾添加分号。		
 使用分号的另一用处是在一行中编写多条语句。
 		
-*提示：也可能看到不带有分号的案例，在 JavaScript 中，用分号来结束语句是可选的。*	
+> 提示：也可能看到不带有分号的案例，在 JavaScript 中，用分号来结束语句是可选的。
 	
 - **JavaScript 代码**
 JavaScript 代码（或者只有 JavaScript）是 JavaScript 语句的序列。浏览器会按照编写顺序来执行每条语句。		
 - **JavaScript 代码块**		
 JavaScript 语句通过代码块的形式进行组合。		
 块由左花括号开始，由右花括号结束。块的作用是使语句序列一起执行。	
-*JavaScript 函数是将语句组合在块中的典型例子。*
+> JavaScript 函数是将语句组合在块中的典型例子。
 
 - **空格**		
 JavaScript 会忽略多余的空格。你可以向脚本添加空格，来提高其可读性。
@@ -600,17 +612,17 @@ JavaScript 会忽略多余的空格。你可以向脚本添加空格，来提高
 		
 ### 3.10 JavaScript 数据类型
 
-1. 整数类型		
+1. **整数类型**		
 一个整数可以是十进制、十六进制和八进制数，一个十进制数由一串数字序列组成，它的第一个数字不能为0；如38，-25，+120，74286等都是十进制整数。		
 如果第一个数字为0，则表示它是一个八进制数；如0，012，0377，04056等都是八进制整数，对应的十进制整数依次为0，10，255和2094。		
 若为0x，则表示它为一个十六进制数；如0x0，0X25，0x1ff，0x30CA等都是十六进制整数，对应的十进制整数依次为0，37，511和4298。
-2. 浮点数类型		
+2. **浮点数类型**		
 浮点数的例子：
 `3.1415,  -3.1E12,  0.1e12 和 2E-12`	
 一个浮点数必须包含一个数字，一个小数点或“e”（或“E”）。
-3. 布尔类型		
+3. **布尔类型**		
 Boolean 类型有两种值：true 和 false
-4. 字符串类型		
+4. **字符串类型**		
 字符串是若干封装在双引号（“）或单引号（'）内的字符。如下：	
 `
 "fish"
@@ -621,29 +633,70 @@ Boolean 类型有两种值：true 和 false
 可以在字符串中使用引号，只要不匹配包围字符串的引号即可：
 `"He is called 'Bill'";`
 
-5. 对象类型		
-用new声明一个新的对象	
+5. **对象类型**		
+用new声明一个新的对象			
+例：
 	
 		var currentDay = new Date();		
 		alert(currentDay.getDay());
-对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 `(name : value)`来定义。属性由逗号分隔：
+对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 `(name : value)`来定义。属性由逗号分隔：		
+例：
 
 		var person={firstname:"Bill", lastname:"Gates", id:5566};
-空格和折行无关紧要。声明可横跨多行：
+空格和折行无关紧要。声明可横跨多行：		
+例：
 
 		var person={
 		firstname : "Bill",
 		lastname  : "Gates",
 		id        :  5566
 		};
-对象属性有两种寻址方式：
+对象属性有两种寻址方式：		
+例：
 
 		name=person.lastname;
 		name=person["lastname"];
+		
+6. Undefined 和 Null		
+Undefined 这个值表示变量不含有值。		
+可以通过将变量的值设置为 null 来清空变量。	
+	
+7. 数组类型
+例：	
+	
+		var arr = new Array(3);
+通过arr.length取得数组的长度
+> 注意： JavaScript 变量均为对象。当您声明一个变量时，就创建了一个新的对象。
 
 ### 3.11 JavaScript 注释
+- 单行注释以 // 开头。
+- 多行注释以 /* 开始，以 */ 结尾。
+
 ### 3.12 JavaScript 保留字关键字
+- **关键字：** 在javascript中，根据规定，关键字是保留的，不能用作变量名或函数名。
+
+break | delete | function | return | type
+----- | ---- | --- | ---- | ---- 
+case | do | if | switch | var
+catch | else | in | this | void
+continue | finally | instance of | throw | while
+default | for | new | try | with
+
+- **保留字：** 保留字在某种意义上是为将来的关键字而保留的单词。因此保留字不能被用作变量名或函数名。
+- 
+abstract | debugger | final | int | private | super
+----- | ---- | --- | ---- | ---- | -----
+boolean | double | float | interface | protected |synchronize
+byte | enum | goto | long | public | throws
+char | export | implements | native | short | transient
+class | extends | import | package | static | volatile，const
 ### 3.13 JavaScript 验证
+- **JavaScript 表单验证：**JavaScript 可用来在数据被送往服务器前对 HTML 表单中的这些输入数据进行验证。				
+被 JavaScript 验证的这些典型的表单数据有：		
+	1. 用户是否已填写表单中的必填项目？			 	                                                                                 	2. 用户输入的邮件地址是否合法？		                                                                                  	3. 用户是否已输入合法的日期？		                                                                         	4. 用户是否在数据域 (numeric field) 中输入了文本？
+	
+- **E-mail 验证：** 输入的数据必须包含 @ 符号和点号(.)。同时，@ 不可以是邮件地址的首字符，并且 @ 之后需有至少一个点号。
+
 ## 4 类型和对象
 ### 4.1 什么是对象
 ### 4.2 JavaScript Number 对象
