@@ -15,7 +15,7 @@ JavaScript 是世界上最流行的编程语言。
    
 ### 1.2 组成部分				
 **ECMAScript，**描述了该语言的语法和基本对象。	
-**文档对象模型（DOM），**描述处理网页内容的方法和接口。	
+**文档对象模型（DOM），**描述处理网页内容的方法和接口。			
 **浏览器对象模型（BOM），**描述与浏览器进行交互的方法和接口。   
  
 ## 2 开始
@@ -93,8 +93,8 @@ JavaScript是一种脚本语言，其源代码在发往客户端运行之前不�
     3. 变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）
     4. 变量名称对大小写敏感（y 和 Y 是不同的变量）  
     
-	> 提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。		
-	虽然JavaScript可以不需定义即可直接使用变量，但不建议这么做。
+> 提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。		
+虽然JavaScript可以不需定义即可直接使用变量，但不建议这么做。
 2. 变量的作用范围：
  	1. 在一个函数（function）之外定义一个变量，那它叫作全局变量
 	2. 在 function 内部定义的变量则叫局部变量，它只作用于函数内
@@ -107,7 +107,7 @@ JavaScript是一种脚本语言，其源代码在发往客户端运行之前不�
 - 变量声明之后，该变量是空的（它没有值）。如需向变量赋值，请使用等号：`carname=“Hello"`;	
 - **也可以在声明变量时对其赋值：**`var name=“Hello”`；	
 - **一条语句，多个变量：**语句以 var 开头，并使用逗号分隔变量即可：`var name="Hello", age=22, job="CEO"`;
-- **声明也可横跨多行：**
+- **声明也可横跨多行：**		
 例：
 
 ```javascript				
@@ -120,7 +120,8 @@ job="CEO";
 
 **重新声明 JavaScript 变量**		
 如果重新声明 JavaScript 变量，该变量的值不会丢失：	
-在以下两条语句执行后，变量 name 的值依然是 “Hello"：
+在以下两条语句执行后，变量 name 的值依然是 “Hello"：	
+
 例：	
 
 ```javascript
@@ -160,7 +161,7 @@ var carname;
 **JavaScript 字符串运算符**		
 用于字符串值连结的运算符（+）将两个字符串值连结在一起。		
 例如：“我的”+“计算机”就返回“我的计算机”		
-如果把数字与字符串相加，结果将成为字符串。
+如果把数字与字符串相加，结果将成为字符串。		
 例：			
 ```
 txt1="What a very";
@@ -168,14 +169,14 @@ txt2="nice day";
 txt3=txt1+txt2;
 txt3 包含的值是 "What a verynice day"。
 ```
-要想在两个字符串之间增加空格，需要把空格插入一个字符串之中：
+要想在两个字符串之间增加空格，需要把空格插入一个字符串之中：		
 例：		
 ```
 txt1="What a very ";
 txt2="nice day";
 txt3=txt1+txt2;
 ```
-或者把空格插入表达式中：
+或者把空格插入表达式中：		
 例：		
 ```
 txt1="What a very";
@@ -352,13 +353,15 @@ for ([初始表达式]; [条件]; [增量表达式]) {
 	
 > 初始表达式是可选的，也就是说不使用也可以，可以在初始表达式中初始化任意（或者多个）值		
 								
-**条件：** 定义运行循环（代码块）的条件，是一个 Boolean 表达式；如果是 true，则语句被执行，如果为 false，则循环结束；		
-*如果省略了条件，那么必须在循环内提供 break。否则循环就无法停下来。这样有可能令浏览器崩溃*		
-
-**增量表达式：** 在循环（代码块）已被执行之后执行；	
-*增量表达式也是可选的。增量可以是负数 (i--)，或者更大 (i=i+15)。可以省略（比如当循环内部有相应的代码时）*	
+**条件：** 定义运行循环（代码块）的条件，是一个 Boolean 表达式；如果是 true，则语句被执行，如果为 false，则循环结束；	
 	
-**被执行的代码块：** 为 true 时，要执行的语句，它可以是复合(多条)语句。
+> 如果省略了条件，那么必须在循环内提供 break。否则循环就无法停下来。这样有可能令浏览器崩溃	
+
+**增量表达式：** 在循环（代码块）已被执行之后执行；
+	
+> 增量表达式也是可选的。增量可以是负数 (i--)，或者更大 (i=i+15)。可以省略（比如当循环内部有相应的代码时）	
+	
+**被执行的代码块：** 为 true 时，要执行的语句，它可以是复合(多条)语句。				
 例：
 
 ```javascript
@@ -552,7 +555,7 @@ fObj();
 ### 3.8 JavaScript 输出
 可以使用 `document.getElementById(id)` 方法从 JavaScript 访问某个 HTML 元素；	
 	
-- 通过指定的 id 来访问 HTML 元素，并改变其内容：
+- 通过指定的 id 来访问 HTML 元素，并改变其内容：			
 例：		
 ```javascript		
 <!DOCTYPE html>
@@ -567,7 +570,7 @@ document.getElementById("demo").innerHTML="My First JavaScript";
 </html>
 ```
 
-- 直接把 `<p>`元素写到 HTML 文档输出中：
+- 直接把 `<p>`元素写到 HTML 文档输出中：				
 例：		
 ```javascript		
 <!DOCTYPE html>
@@ -666,6 +669,8 @@ Undefined 这个值表示变量不含有值。
 	
 		var arr = new Array(3);
 通过arr.length取得数组的长度
+
+
 > 注意： JavaScript 变量均为对象。当您声明一个变量时，就创建了一个新的对象。
 
 ### 3.11 JavaScript 注释
@@ -682,8 +687,9 @@ catch | else | in | this | void
 continue | finally | instance of | throw | while
 default | for | new | try | with
 
+
 - **保留字：** 保留字在某种意义上是为将来的关键字而保留的单词。因此保留字不能被用作变量名或函数名。
-- 
+ 
 abstract | debugger | final | int | private | super
 ----- | ---- | --- | ---- | ---- | -----
 boolean | double | float | interface | protected |synchronize
@@ -691,22 +697,192 @@ byte | enum | goto | long | public | throws
 char | export | implements | native | short | transient
 class | extends | import | package | static | volatile，const
 ### 3.13 JavaScript 验证
-- **JavaScript 表单验证：**JavaScript 可用来在数据被送往服务器前对 HTML 表单中的这些输入数据进行验证。				
+- **JavaScript 表单验证：**JavaScript 可用来在数据被送往服务器前对 HTML 表单中的这些输入数据进行验证。
 被 JavaScript 验证的这些典型的表单数据有：		
-	1. 用户是否已填写表单中的必填项目？			 	                                                                                 	2. 用户输入的邮件地址是否合法？		                                                                                  	3. 用户是否已输入合法的日期？		                                                                         	4. 用户是否在数据域 (numeric field) 中输入了文本？
-	
+	1. 用户是否已填写表单中的必填项目？
+	2.  用户输入的邮件地址是否合法？
+	3.  用户是否已输入合法的日期？
+	4.  用户是否在数据域 (numeric field) 中输入了文本？	
 - **E-mail 验证：** 输入的数据必须包含 @ 符号和点号(.)。同时，@ 不可以是邮件地址的首字符，并且 @ 之后需有至少一个点号。
 
 ## 4 类型和对象
 ### 4.1 什么是对象
+JavaScript 中的所有事物都是对象：字符串、数值、数组、函数...	
+JavaScript 允许自定义对象；		
+JavaScript 提供多个内建对象，比如 String、Date、Array 等等。		
+对象只是带有属性和方法的特殊数据类型。
+		
+- **访问对象的属性：**属性是与对象相关的值。		
+例：		
+```javascript
+objectName.length
+```
+- **访问对象的方法：**方法是能够在对象上执行的动作。
+- **创建 JavaScript 对象**		
+方法：		
+1.定义并创建对象的实例		
+例：		
+```javascript
+var currentDay = new Date();
+person={firstname:"John",lastname:"Doe",age:50,eyecolor:"blue"};
+```
+2.使用函数来定义对象，然后创建新的对象实例		
+例：		
+```javascript 
+function person(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+}
+var myFather=new person("Bill","Gates",56
+```
+
 ### 4.2 JavaScript Number 对象
+JavaScript 只有一种数字类型，可以使用也可以不使用小数点来书写			
+所有 JavaScript 数字均为 64 位.		
+
+- **精度：** 整数（不使用小数点或指数计数法）最多为 15 位。		
+小数的最大位数是 17，但是浮点运算并不总是 100% 准确：
+
+- **八进制和十六进制：**如果前缀为 0，则 JavaScript 会把数值常量解释为八进制数，如果前缀为 0 和 "x"，则解释为十六进制数。
+
+> 提示：绝不要在数字前面写零，除非您需要进行八进制转换。
+
+**数字属性和方法**
+
+- 属性：
+
+```
+MAX VALUE, NaN				
+MIN VALUE, prototype		
+NEGATIVE INFINITIVE, constructor		
+POSITIVE INFINITIVE
+```
+
+- 方法：
+
+```
+toExponential(), toString()
+toFixed(), valueOf()
+toPrecision()
+```
 ### 4.3 JavaScript Array（数组）
+- **数组对象的作用是：**使用单独的变量名来存储一系列的值。
+- **定义数组：**数组对象用来在单独的变量名中存储一系列的值。
+使用关键词 new 来创建数组对象。		
+例：		
+```javascript
+var myArray=new Array()
+```
+- **赋值：**
+例：		
+```javascript
+var mycars=new Array()
+mycars[0]="Saab"
+```
+或		
+```javascript
+var mycars=new Array("Saab","Volvo","BMW")
+```
+
 ### 4.4 JavaScript String
+字符串对象用于处理已有的字符块。		
+例： 		
+```javascript
+var txt="Hello world!"
+document.write(txt.length)
+document.write(txt.toUpperCase())
+```			
+输出12 HELLO WORLD!
+
 ### 4.5 JavaScript Date（日期）
+- **定义日期：**Date 对象用于处理日期和时间，可以通过 new 关键词来定义 Date 对象。
+
+```
+var myDate=new Date()
+```
+
+> 注意：Date 对象自动使用当前的日期和时间作为其初始值。
+
 ### 4.6 JavaScript Boolean（布尔）
+- **Boolean 对象：**可以将 Boolean 对象理解为一个产生逻辑值的对象包装器。		
+
+Boolean（逻辑）对象用于将非逻辑值转换为逻辑值（true 或者 false）。
+
+- **创建 Boolean 对象**		
+使用关键词 new 来定义 Boolean 对象。下面的代码定义了一个名为 myBoolean 的逻辑对象：
+			
+``` 
+var myBoolean=new Boolean()
+```
+> 注释：如果逻辑对象无初始值或者其值为 0、-0、null、""、false、undefined 或者 NaN，那么对象的值为 false。否则，其值为 true（即使当自变量为字符串 "false" 时）
+
 ### 4.7 JavaScript Math（算数）
+- Math 对象：Math 对象提供多种算数值类型和函数。无需在使用这个对象之前对它进行定义。		
+Math（算数）对象的作用是：执行普通的算数任务。
+- 算数值：JavaScript 提供 8 种可被 Math 对象访问的算数值及在 Javascript 中使用这些值的方法：
+
+```
+常数, Math.E
+2 的自然对数, Math.LN2
+圆周率, Math.PI
+10 的自然对数, Math.LN10
+2 的平方根, Math.SQRT2
+以 2 为底的 e 的对数, Math.LOG2E
+1/2 的平方根, Math.SQRT1_2
+以 10 为底的 e 的对数, Math.LOG10E
+```
+
+- 算数方法
+	1. round 方法对一个数进行四舍五入
+	2. random() 方法来返回一个介于 0 和 1 之间的随机数
+          
 ### 4.8 JavaScript RegExp 对象
+RegExp 对象用于规定在文本中检索的内容
+RegExp 是正则表达式的缩写
+
+- **定义 RegExp：**通过 new 关键词来定义 RegExp 对象。以下代码定义了名为 patt1 的 RegExp 对象，其模式是 "e"：
+
+```
+var patt1=new RegExp("e");
+```
+当使用该 RegExp 对象在一个字符串中检索时，将寻找的是字符 "e"。
+
+**RegExp 对象的方法：**	test()、exec() 以及 compile()。
+
+**test() 方法：**检索字符串中的指定值。返回值是 true 或 false。
+	
+```javascript
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free"));
+```		
+输出true，因为此字符串中含有“e”
+
+**exec() 方法：**检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。  
+
+```javascript    
+var patt1=new RegExp("e");
+document.write(patt1.exec("The best things in life are free"));
+```		
+输出“e”
+
+**compile() 方法：**用于改变 RegExp。compile() 既可以改变检索模式，也可以添加或删除第二个参数。  
+
+```javascript             
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free"));
+patt1.compile("d");
+document.write(patt1.test("The best things in life are free"));
+```		
+输出truefalse，因为字符串里有“e”没有“d”
 ## 5 理解JavaScript HTML DOM
+
+**HTML DOM （文档对象模型）：**通过 HTML DOM，可访问 JavaScript HTML 文档的所有元素。		
+当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。HTML DOM 模型被构造为对象的树。			
+**HTML DOM 树：**
+
 ### 5.1 DOM 简介
 ### 5.2 DOM HTML
 ### 5.3 DOM CSS
