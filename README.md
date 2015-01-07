@@ -95,6 +95,7 @@ JavaScript是一种脚本语言，其源代码在发往客户端运行之前不�
     
 > 提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。		
 虽然JavaScript可以不需定义即可直接使用变量，但不建议这么做。
+
 2. 变量的作用范围：
  	1. 在一个函数（function）之外定义一个变量，那它叫作全局变量
 	2. 在 function 内部定义的变量则叫局部变量，它只作用于函数内
@@ -664,7 +665,7 @@ Boolean 类型有两种值：true 和 false
 Undefined 这个值表示变量不含有值。		
 可以通过将变量的值设置为 null 来清空变量。	
 	
-7. 数组类型
+7. 数组类型		
 例：	
 	
 		var arr = new Array(3);
@@ -718,15 +719,17 @@ JavaScript 提供多个内建对象，比如 String、Date、Array 等等。
 objectName.length
 ```
 - **访问对象的方法：**方法是能够在对象上执行的动作。
-- **创建 JavaScript 对象**		
-方法：		
-1.定义并创建对象的实例		
-例：		
+- **创建 JavaScript 对象**	
+	
+方法：
+		
+1. 定义并创建对象的实例		
+例：				
 ```javascript
 var currentDay = new Date();
 person={firstname:"John",lastname:"Doe",age:50,eyecolor:"blue"};
 ```
-2.使用函数来定义对象，然后创建新的对象实例		
+2. 使用函数来定义对象，然后创建新的对象实例		
 例：		
 ```javascript 
 function person(firstname,lastname,age,eyecolor)
@@ -1257,22 +1260,188 @@ element.removeEventListener('click', callback);
 // Add listener
 element.addEventListener('click', callback);
 ```
-**Element对象**
+
+**Element对象**	
+	
+![Image of Element]
+(https://github.com/sammulyuan/javascript/blob/master/Element.png)
 
 ## 8 JavaScript 调试
 ### 8.1. Firebug
+Firebug是网页浏览器 Mozilla Firefox 下的一款开发类扩展，现属于Firefox的五星级强力推荐扩展之一。		
+它集HTML查看和编辑、Javascript控制台、网络状况监视器于一体，是开发JavaScript、CSS、HTML和Ajax的得力助手。		
+Firebug如同一把精巧的瑞士军刀，从各个不同的角度剖析Web页面内部的细节层面，给Web开发者带来很大的便利。		
+Firebug是一个除错工具。用户可以利用它除错、编辑、甚至删改任何网站的 CSS、HTML、DOM 以及JavaScript 代码。	
+	
+- **主要功能：**		
+CSS调试		
+CSS尺标		
+网络监视器		
+JS调试器		
+Console 控制台		
+修改HTML		
+DOM查看器		
+
 ## 9 创建智能化表单
 ### 9.1 访问表单元素
+
+- 表单对象Form属性：
+
+```
+action 、elements、method、name、target  
+```   
+- 表单提交的方法：
+
+```
+Get  Post   name    target           
+```
+- 表示打开表单的url：
+
+```
+_self    _parent    _blank    _top
+```
+- 表单元素：
+
+```
+document.forms[索引].elements[索引].属性  
+document.forms[索引].elements[索引].方法（参数）  
+document.forms[索引].属性  
+document.forms["表单名称"].属性  
+document.表单名称.元素名称.属性   
+document.表单名称.元素名称.方法（参数）
+```
 ### 9.2 表单提交
+**表单提交的一般方式：**
+
+```
+1. .....<input type="submit" onclick="return validate();">     
+2. .....<form action="...." name="...." onsubmit="return validate(this);">     
+3. .....<input type="button" onclick="validate(this)">
+```
+
 ### 9.3 隐藏和显示表单
+**validate()函数** 	
+	
+```
+function validate(obj){  
+obj.submit() 
+}
+```
 ## 10 JavaScript 库
 ### 10.1 JavaScript库的介绍
+JavaScript 库 - jQuery、Prototype、MooTools。
 ### 10.2 JavaScript jQuery
+**jQuery：**jQuery 是目前最受欢迎的 JavaScript 框架。		
+它使用 CSS 选择器来访问和操作网页上的 HTML 元素（DOM 对象）。	
+jQuery 同时提供 companion UI（用户界面）和插件。	
+许多大公司在网站上使用 jQuery：Google、Microsoft、IBM、Netflix 
+
+- **jQuery 描述：**主要的 jQuery 函数是 $() 函数（jQuery 函数）。如果您向该函数传递 DOM 对象，它会返回 jQuery 对象，带有向其添加的 jQuery 功能。		
+jQuery 允许通过 CSS 选择器来选取元素。		
+在 JavaScript 中，可以分配一个函数以处理窗口加载事件：
+	
+例：		
+JavaScript 方式：
+
+```javascript
+function myFunction()
+{
+  var obj=document.getElementById("h01");
+  obj.innerHTML="Hello jQuery";
+}
+onload=myFunction;
+```		
+等价的 jQuery 是不同的：		
+jQuery 方式：
+		
+```javascript
+function myFunction()
+{
+  $("#h01").html("Hello jQuery");
+}
+$(document).ready(myFunction);   
+```                                                                                                                                                                                      
 ### 10.3 JavaScript Prototype
+**Prototype：**Prototype 是一种库，提供用于执行常见 web 任务的简单 API。
+
+- API 是应用程序编程接口（Application Programming Interface）的缩写。它是包含属性和方法的库，用于操作 HTML DOM。
+- Prototype 通过提供类和继承，实现了对 JavaScript 的增强。
+
 ### 10.4 JavaScript MooTools
+**MooTools：**MooTools 也是一个框架，提供了可使常见的 JavaScript 编程更为简单的 API。
+
+MooTools 也含有一些轻量级的效果和动画函数。
 ### 10.5 JavaScript AJAX的使用
+**AJAX** 即“Asynchronous JavaScript and XML”（异步 JavaScript 和 XML），也就是无刷新数据读取。
+
+**http 请求**		
+GET 用于获取数据。GET 是在 URL 中传递数据，它的安全性低，容量低。		
+POST 用于上传数据。POST 安全性一般，容量几乎无限。
+
+**ajax 请求：**	
+	
+ajax 请求一般分成 4 个步骤：		
+**1.创建 ajax 对象**		
+在创建对象时，有兼容问题：
+
+```javascript
+var oAjax = new XMLHttpRequest();   //for ie6 以上
+var oAjax = new ActiveXObject('Microsoft.XMLHTTP'); //for ie6
+```		
+合并上面的代码：
+
+```javascript
+var oAjax = null;
+if(window.XMLHttpRequest){
+  oAjax = new XMLHttpRequest();
+}else{
+  oAjax = new ActiveXObject('Microsoft.XMLHTTP');
+}
+```		
+
+**2.连接服务器：**会用到 open() 方法。
+
+- open() 方法有三个参数：		
+第一个参数是连接方法即 GET 和 POST，		
+第二个参数是 URL 即所要读取数据的地址，		
+第三个参数是否异步，它是个布尔值，true 为异步，false 为同步。
+
+```javascript
+oAjax.open('GET', url, true);
+```
+
+**3.发送请求：**send() 方法。
+
+```javascript
+oAjax.send();
+```
+
+**4.接收返回值**		
+onreadystatechange 事件。当请求被发送到服务器时，我们需要执行一些基于响应的任务。每当 readyState 改变时，就会触发 onreadystatechange 事件。
+
+ ```    
+readyState：请求状态，返回的是整数（0-4）。
+  0（未初始化）：还没有调用 open() 方法。
+  1（载入）：已调用 send() 方法，正在发送请求。
+  2（载入完成）：send() 方法完成，已收到全部响应内容。
+  3（解析）：正在解析响应内容。
+  4（完成）：响应内容解析完成，可以在客户端调用。
+status：请求结果，返回 200 或者 404。
+200 => 成功。
+404 => 失败。
+```
 ## 11 JavaScript 实例
 ### 11.1 JavaScript 对象实例
+极客课程链接：[JavaScript内置对象](http://www.jikexueyuan.com/course/195.html)
 ### 11.2 JavaScript 浏览器对象实例
+极客课程链接：[JavaScript浏览器对象](http://www.jikexueyuan.com/course/208.html)
 ### 11.3 JavaScript HTML DOM 实例
 ### 11.4 JavaScript 总结
+jQuery 是一个 JavaScript 库。		
+jQuery 极大地简化了 JavaScript 编程。		
+HTML DOM 定义了访问和操作 HTML 文档的标准方法。		
+HTML DOM 独立于平台和语言，可被任何编程语言使用，比如 Java、JavaScript 和 VBscript。		
+AJAX = 异步 JavaScript 和 XML。		
+AJAX 不是一种新的编程语言，而是一种使用现有标准的新方法。		
+通过与服务器进行数据交换，AJAX 可以在不重新加载整个网页的情况下，对网页的某部分进行更新。		
+接下来要学好HTML5。
