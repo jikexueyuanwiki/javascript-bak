@@ -1,6 +1,6 @@
 
 * [应该知道](README.md)
-	* [日常用途](./01_daily_use.md)    
+	* [日常用途](../01_daily_use.md)    
 	* [组成部分](02_component.md)    
 * 开始
 	* [JavaScript导论](03_javascript_introduction.md)                   
