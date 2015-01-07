@@ -23,7 +23,7 @@ JavaScript 是世界上最流行的编程语言。
 JavaScript是一种脚本语言，其源代码在发往客户端运行之前不需经过编译，而是将文本格式的字符代码发送给浏览器由浏览器解释运行。  
 直译语言的弱点是安全性较差，而且在JavaScript中，如果一条运行不了，那么下面的语言也无法运行。而其解决办法就是于使用`try{}catch(){}`︰		
 ![Image of trycatch]		
-(https://github.com/sammulyuan/javascript/blob/master/trycatch.png)  
+(https://github.com/sammulyuan/javascript/blob/master/images%20/trycatch.png)  
 
 1. Javascript被归类为直译语言，因为目前主流的引擎都是每次运行时加载代码并解译。		
 2. V8是将所有代码解译后再开始运行，其他引擎则是逐行解译（SpiderMonkey会将解译过的指令暂存，以提高性能，称为实时编译），但由于V8的核心部份多数用Javascript撰写（而SpiderMonkey是用C++），因此在不同的测试上，两者性能互有优劣。		
@@ -153,7 +153,7 @@ var carname;
 = |  x=y | |  x=5
 += | x+=y | x=x+y | x=15
 -= | x-=y | x=x-y | x=5
-*= | x*=y | x=x*y | x=50
+\*= | x\*=y | x=x*y | x=50
 /= | x/=y | x=x/y | x=2
 %= | x%=y | x=x%y | x=0
 ^= | x^=y | x=x^y按位异或，不同为1，true，相同为0，false | x=15
@@ -230,7 +230,7 @@ name=(age==“22”)?"Jessica":"Dear ";
 是复合运算进行计算时的先后顺序，对于所有的二元运算都是从左到右进行计算，用圆括号来忽略优先级：
 
 ![Image of youxianji]		
-(https://github.com/sammulyuan/javascript/blob/master/youxianji.png)
+(https://github.com/sammulyuan/javascript/blob/master/images%20/youxianji.png)
 
 ### 3.6 JavaScript 条件语句和循环
 #### 3.6.1 JavaScript If...Else
@@ -887,7 +887,7 @@ document.write(patt1.test("The best things in life are free"));
 **HTML DOM 树：**
 
 ![Image of DOM%E6%A0%91]
-(https://github.com/sammulyuan/javascript/blob/master/DOM%E6%A0%91.png)
+(https://github.com/sammulyuan/javascript/blob/master/images%20/DOM%E6%A0%91.png)
 
 - JavaScript 能够改变页面中的所有 HTML 元素
 - JavaScript 能够改变页面中的所有 HTML 属性
@@ -1264,7 +1264,7 @@ element.addEventListener('click', callback);
 **Element对象**	
 	
 ![Image of Element]
-(https://github.com/sammulyuan/javascript/blob/master/Element.png)
+(https://github.com/sammulyuan/javascript/blob/master/images%20/Element.png)
 
 ## 8 JavaScript 调试
 ### 8.1. Firebug
