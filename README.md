@@ -776,7 +776,7 @@ toPrecision()
 ```javascript
 var myArray=new Array()
 ```
-- **赋值：**
+- **赋值：**		
 例：		
 ```javascript
 var mycars=new Array()
@@ -820,9 +820,9 @@ var myBoolean=new Boolean()
 > 注释：如果逻辑对象无初始值或者其值为 0、-0、null、""、false、undefined 或者 NaN，那么对象的值为 false。否则，其值为 true（即使当自变量为字符串 "false" 时）
 
 ### 4.7 JavaScript Math（算数）
-- Math 对象：Math 对象提供多种算数值类型和函数。无需在使用这个对象之前对它进行定义。		
+- **Math 对象：**Math 对象提供多种算数值类型和函数。无需在使用这个对象之前对它进行定义。		
 Math（算数）对象的作用是：执行普通的算数任务。
-- 算数值：JavaScript 提供 8 种可被 Math 对象访问的算数值及在 Javascript 中使用这些值的方法：
+- **算数值：**JavaScript 提供 8 种可被 Math 对象访问的算数值及在 Javascript 中使用这些值的方法：
 
 ```
 常数, Math.E
@@ -835,7 +835,7 @@ Math（算数）对象的作用是：执行普通的算数任务。
 以 10 为底的 e 的对数, Math.LOG10E
 ```
 
-- 算数方法
+- **算数方法**
 	1. round 方法对一个数进行四舍五入
 	2. random() 方法来返回一个介于 0 和 1 之间的随机数
           
@@ -852,7 +852,7 @@ var patt1=new RegExp("e");
 
 **RegExp 对象的方法：**	test()、exec() 以及 compile()。
 
-**test() 方法：**检索字符串中的指定值。返回值是 true 或 false。
+- **test() 方法：**检索字符串中的指定值。返回值是 true 或 false。
 	
 ```javascript
 var patt1=new RegExp("e");
@@ -860,7 +860,7 @@ document.write(patt1.test("The best things in life are free"));
 ```		
 输出true，因为此字符串中含有“e”
 
-**exec() 方法：**检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。  
+- **exec() 方法：**检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。  
 
 ```javascript    
 var patt1=new RegExp("e");
@@ -868,7 +868,7 @@ document.write(patt1.exec("The best things in life are free"));
 ```		
 输出“e”
 
-**compile() 方法：**用于改变 RegExp。compile() 既可以改变检索模式，也可以添加或删除第二个参数。  
+- **compile() 方法：**用于改变 RegExp。compile() 既可以改变检索模式，也可以添加或删除第二个参数。  
 
 ```javascript             
 var patt1=new RegExp("e");
@@ -882,6 +882,9 @@ document.write(patt1.test("The best things in life are free"));
 **HTML DOM （文档对象模型）：**通过 HTML DOM，可访问 JavaScript HTML 文档的所有元素。		
 当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。HTML DOM 模型被构造为对象的树。			
 **HTML DOM 树：**
+
+![Image of DOM%E6%A0%91]
+(https://github.com/sammulyuan/javascript/blob/master/DOM%E6%A0%91.png)
 
 ### 5.1 DOM 简介
 ### 5.2 DOM HTML
