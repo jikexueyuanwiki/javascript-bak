@@ -878,6 +878,7 @@ document.write(patt1.test("The best things in life are free"));
 ```		
 输出truefalse，因为字符串里有“e”没有“d”
 ## 5 理解JavaScript HTML DOM
+### 5.1 DOM 简介
 
 **HTML DOM （文档对象模型）：**通过 HTML DOM，可访问 JavaScript HTML 文档的所有元素。		
 当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。HTML DOM 模型被构造为对象的树。			
@@ -886,24 +887,378 @@ document.write(patt1.test("The best things in life are free"));
 ![Image of DOM%E6%A0%91]
 (https://github.com/sammulyuan/javascript/blob/master/DOM%E6%A0%91.png)
 
-### 5.1 DOM 简介
+- JavaScript 能够改变页面中的所有 HTML 元素
+- JavaScript 能够改变页面中的所有 HTML 属性
+- JavaScript 能够改变页面中的所有 CSS 样式
+- JavaScript 能够对页面中的所有事件做出反应
+
+**查找 HTML 元素方法**	
+	
+1. 通过 id 找到 HTML 元素：在 DOM 中查找 HTML 元素的最简单的方法		
+例：		
+```javascript
+var x=document.getElementById("hello");
+```			
+如果找到hello元素，则x返回hello元素；否则返回null		
+2. 通过标签名找到 HTML 元素		
+例：		
+```javascript
+var x=document.getElementById("main");
+var y=x.getElementsByTagName("p");
+```		
+凭id找main元素，在找main元素中的所有`<p>`元素
+3. 通过类名找到 HTML 元素
+
+> 提示：通过类名查找 HTML 元素在 IE 5,6,7,8 中无效。
+
 ### 5.2 DOM HTML
+- **改变 HTML 输出流：**document.write() 可用于直接向 HTML 输出流写内容。
+例：
+
+```javascript
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+document.write(Date());
+</script>
+</body>
+</html>
+```
+> 提示：绝不要使用在文档加载之后使用 document.write()。这会覆盖该文档。
+
+- **改变 HTML 内容：**修改 HTML 内容的最简单的方法时使用 innerHTML 属性。	
+	
+```
+document.getElementById(id).innerHTML=new HTML
+```			   
+例：
+
+```javascript			
+<html>
+<body>
+<p id="p1">Hello World!</p>
+<script>
+document.getElementById("p1").innerHTML="New text!";
+</script>
+</body>
+</html>
+```			
+此句输出的是New text！不是Hello World！
+- **改变 HTML 属性**
+
+```
+document.getElementById(id).attribute=new value
+```
 ### 5.3 DOM CSS
+**改变 HTML 样式**
+
+```
+document.getElementById(id).style.property=new style
+```			
+例：
+
+```javascript
+<p id="p2">Hello World!</p>
+<script>
+document.getElementById("p2").style.color="blue";
+</script>
+```			
+输出后Hello World！字体为蓝色
 ### 5.4 DOM 元素
+**创建新的 HTML 元素：**向 HTML DOM 添加新元素，必须首先创建该元素（元素节点），然后向一个已存在的元素追加该元素。 	
+	  
+- **创建新的`<p>`元素：**		
+```javascript
+var para=document.createElement("p");
+```		
+- **创建文本节点，向 `<p>` 元素添加文本：**			
+```javascript
+var node=document.createTextNode("这是新段落。");
+```
+- **向 `<p>`元素追加文本节点：**			
+```javascript
+para.appendChild(node);
+```
+- **向一个已有的元素追加新元素：**				
+```javascript
+var element=document.getElementById("div1");
+```
+- **向已有的元素追加新元素：**			
+```javascript
+element.appendChild(para);
+```
+
+**删除已有的 HTML 元素：**删除 HTML 元素，必须首先获得该元素的父元素：		
+
+- 从父元素中删除子元素：		
+```javascript
+parent.removeChild(child);
+```      
+- 在不引用父元素的情况下删除某个元素：找到希望删除的子元素，然后使用其 parentNode 属性来找到父元素：		
+例：		
+```javascript
+var child=document.getElementById("p1");
+child.parentNode.removeChild(child);
+```
+
 ## 6 JS 浏览器BOM
+浏览器对象模型（Browser Object Model）尚无正式标准。	
+由于现代浏览器已经（几乎）实现了 JavaScript 交互性方面的相同方法和属性，因此常被认为是 BOM 的方法和属性。		
 ### 6.1 JavaScript Window
+所有浏览器都支持 window 对象。它表示浏览器窗口。所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。	
+全局变量是 window 对象的属性。全局函数是 window 对象的方法。
+甚至 HTML DOM 的 document 也是 window 对象的属性之一：
+
+```javascript
+window.document.getElementById("header");
+```
+
+- **Window 尺寸：**有三种方法能够确定浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）。
+对于Internet Explorer、Chrome、Firefox、Opera 以及 Safari：
+```
+window.innerHeight - 浏览器窗口的内部高度		
+window.innerWidth - 浏览器窗口的内部宽度
+```				
+对于 Internet Explorer 8、7、6、5：
+```
+document.documentElement.clientHeight	
+document.documentElement.clientWidth	
+```		
+或者		
+```
+document.body.clientHeight		
+document.body.clientWidth
+```		
+- **一些其他方法：**		
+```
+window.open() - 打开新窗口		
+window.close() - 关闭当前窗口		
+window.moveTo() - 移动当前窗口		
+window.resizeTo() - 调整当前窗口的尺寸
+```		
+
 ### 6.2 JavaScript Window Screen
+**Window Screen：**window.screen 对象在编写时可以不使用 window 这个前缀。		
+
+```
+screen.availWidth - 可用的屏幕宽度
+screen.availHeight - 可用的屏幕高度
+```
+
+- **Window Screen 可用宽度：**screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如窗口任务栏。
+- **Window Screen 可用高度：**screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如窗口任务栏。
+- **函数：**alert，confirme，prompt，open，close
+
 ### 6.3 JavaScript Window Location
+**Window Location：**window.location 对象在编写时可不使用 window 这个前缀。		
+
+```          
+location.hostname 返回 web 主机的域名		
+location.pathname 返回当前页面的路径和文件名		
+location.port 返回 web 主机的端口 （80 或 443）	
+location.protocol 返回所使用的 web 协议（http:// 或 https://）
+```
+
+- **Window Location Href：**location.href 属性返回当前页面的 URL。
+- **Window Location Pathname：**location.pathname 属性返回 URL 的路径名。
+- **Window Location Assign：**location.assign() 方法加载新的文档。
+
 ### 6.4 JavaScript Window History
+**Window History：**window.history 对象在编写时可不使用 window 这个前缀。为了保护用户隐私，对 JavaScript 访问该对象的方法做出了限制。
+
+```         
+history.back() - 与在浏览器点击后退按钮相同
+history.forward() - 与在浏览器中点击按钮向前相同
+```
+
+- **Window History Back：**history.back() 方法加载历史列表中的前一个 URL。
+- **Window History Forward：**history forward() 方法加载历史列表中的下一个 URL。
+
 ### 6.5 JavaScript Navigator
+**Window Navigator：**window.navigator 对象在编写时可不使用 window 这个前缀。
+
+- **浏览器检测：**		
+由于 navigator 可误导浏览器检测，使用对象检测可用来嗅探不同的浏览器。		
+由于不同的浏览器支持不同的对象，您可以使用对象来检测浏览器。	
+例如，由于只有 Opera 支持属性 "window.opera"，可以据此识别出 Opera。		
+例：		
+```javascript
+if (window.opera) {...some action...}
+```
+
 ### 6.6 JavaScript 弹窗
+- **警告框：**警告框经常用于确保用户可以得到某些信息。	
+当警告框出现后，用户需要点击确定按钮才能继续进行操作。
+
+```
+alert("文本")
+```
+- **确认框：**确认框用于使用户可以验证或者接受某些信息。	
+当确认框出现后，用户需要点击确定或者取消按钮才能继续进行操作。
+
+```
+confirm("文本")
+```
+如果用户点击确认，那么返回值为 true。如果用户点击取消，那么返回值为 false。
+
+- **提示框：**提示框经常用于提示用户在进入页面前输入某个值。	
+当提示框出现后，用户需要输入某个值，然后点击确认或取消按钮才能继续操纵。
+
+```
+prompt("文本","默认值")
+```
+如果用户点击确认，那么返回值为输入的值。如果用户点击取消，那么返回值为 null。
+
 ### 6.7 JavaScript 计时事件
+**avaScript 计时事件：**通过使用 JavaScript，我们有能力作到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件。		
+
+方法:
+
+```
+setTimeout()：未来的某时执行代码
+clearTimeout()：取消setTimeout()
+```
+- **setTimeout()**		
+
+```
+var t=setTimeout("javascript语句",毫秒)
+```		
+
+setTimeout() 方法会返回某个值。		
+第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 `alert('5 seconds!')`，或者对函数的调用，诸如 `alertMsg()`。
+
+- **clearTimeout()**
+
+```
+clearTimeout(setTimeout_variable)
+```
+
 ### 6.8 JavaScript Cookies
+cookie 是存储于访问者的计算机中的变量。每当同一台计算机通过浏览器请求某个页面时，就会发送这个 cookie。你可以使用 JavaScript 来创建和取回 cookie 的值。
+		
+- **创建和存储 cookie	**	
+例：创建一个可在 cookie 变量中存储访问者姓名的函数
+
+```javascript
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" :";expires="+exdate.toGMTString())
+}
+```
+
 ## 7 事件和事件监听
 ### 7.1 JavaScript事件处理（DOM 事件）
+- **onBlur：**在select、text、password、textarea失去焦点时被触发；
+- **onChange：**在select、text、textarea的值被改变且失去焦点时被触发；		
+onchange 事件常结合对输入字段的验证来使用。
+- **onClick：**出现在一个对象被鼠标选中时被触发（button,checkbox,radio,reset,submit,text,textarea等）
+- **onFocus：**在一个对象获得焦点，select、text、text area时被触发；
+- **onLoad：**出现在一个文档完成对一个窗口的载入用户进入页面时被触发；
+- **onMouseOver：**鼠标被移动到一个超连接上时被触发；	
+onmouseover 事件可用于在用户的鼠标移至 HTML 元素上方时触发函数。
+- **onMouseOut：**鼠标从一个超连接上移开时被触发；		
+onmouseout 事件可用于在用户的鼠标移出元素时触发函数。
+- **onSelect：**当form对象中的内容被选中时被触发，视情况可以对一个对象组合使用这些事件处理；
+- **onSubmit：**出现在用户通过提交按钮提交一个表单时被触发；
+- **onUnload：**当用户退出一个文档离开页面时被触发；      
+
+> 注意：onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。		
+首先当点击鼠标按钮时，会触发 onmousedown 事件，当释放鼠标按钮时，会触发 onmouseup 事件，最后，当完成鼠标点击时，会触发 onclick 事件。
+
+**HTML 事件的例子：**
+
+1. 当用户点击鼠标时
+2. 当网页已加载时
+3. 当图像已加载时
+4. 当鼠标移动到元素上时
+5. 当输入字段被改变时
+6. 当提交 HTML 表单时
+7. 当用户触发按键时
+
 ### 7.2 JavaScript异常处理
+**JavaScript 抛出错误：**当错误发生时，当事情出问题时，JavaScript 引擎通常会停止，并生成一个错误消息。		
+描述这种情况的技术术语是：`JavaScript 将抛出一个错误`		
+**JavaScript 测试和捕捉：**	
+	
+- **try 语句：**允许我们定义在执行时进行错误测试的代码块。
+- **catch 语句：**允许我们定义当 try 代码块发生错误时，所执行的代码块。
+
+JavaScript 语句 try 和 catch 是成对出现的。
+
+```
+try
+{
+   //在这里运行代码
+}
+catch(err)
+{
+   //在这里处理错误
+}
+```
+
+- **Throw 语句：** throw 语句允许我们创建自定义错误。	
+正确的技术术语是：`创建或抛出异常（exception）`	
+
+如果把 throw 与 try 和 catch 一起使用，那么您能够控制程序流，并生成自定义的错误消息。
+
+```
+throw exception
+```
+> 注意：异常可以是 JavaScript 字符串、数字、逻辑值或对象。
+
 ### 7.3 onClick 和 onLoad
+- onload 和 onunload 事件可用于处理 cookie。		
+- onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本。
+
+```
+<body onload="checkCookies()">
+```
+
 ### 7.4 DOM 事件监听
+**添加监听：**在JavaScript中，我们使用如下的方式为元素添加事件监听：
+
+```
+element.addEventListener(<event-name>, <callback>, <use-capture>);
+```
+
+- **event-name(string):**这是你想监听的事件的名称或类型。	
+它可以是任何的标准DOM事件（click, mousedown, touchstart, transitionEnd,等等），当然也可以是你自己定义的事件名称（我们会在后面介绍自定义事件相关内容）。
+- **callback(function)（回调函数）：**这个函数会在事件触发的时候被调用。相应的事件(event)对象，以及事件的数据，会被作为第一个参数传入这个函数。
+- **use-capture(boolean)：**这个参数决定了回调函数(callback)是否在“捕获(capture)”阶段被触发。
+
+```javascript
+var element = document.getElementById('element');
+function callback() {
+  alert('Hello');
+}
+// Add listener
+element.addEventListener('click', callback);
+```
+**移除监听：**使用`element.removeEventListener()`方法来移除事件监听：
+
+```
+element.removeEventListener(<event-name>, <callback>, <use-capture>);
+```
+
+> 注意：必须要有这个被绑定的回调函数的引用。简单地调用element.removeEventListener('click');是不能达到想要的效果的。
+         
+不能使用匿名函数作为回调函数。			
+例：		
+```javacript
+var element = document.getElementById('element');
+function callback() {
+alert('Hello once');
+element.removeEventListener('click', callback);
+}
+// Add listener
+element.addEventListener('click', callback);
+```
+**Element对象**
+
 ## 8 JavaScript 调试
 ### 8.1. Firebug
 ## 9 创建智能化表单
