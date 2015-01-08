@@ -36,4 +36,4 @@ name=(age==“22”)?"Jessica":"Dear ";
 是复合运算进行计算时的先后顺序，对于所有的二元运算都是从左到右进行计算，用圆括号来忽略优先级：
 
 ![Image of youxianji]		
-(https://github.com/sammulyuan/javascript/blob/master/images%20/youxianji.png)
+(images/youxianji.png)

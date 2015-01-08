@@ -48,4 +48,4 @@ element.addEventListener('click', callback);
 **Element对象**	
 	
 ![Image of Element]
-(https://github.com/sammulyuan/javascript/blob/master/images%20/Element.png)
+(images/Element.png)
