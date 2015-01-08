@@ -5,8 +5,8 @@
 当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。HTML DOM 模型被构造为对象的树。			
 **HTML DOM 树：**
 
-![Image of DOM%E6%A0%91]
-(https://github.com/sammulyuan/javascript/blob/master/images%20/DOM%E6%A0%91.png)
+![Image of DOMtree]
+(images/DOMtree.png)
 
 - JavaScript 能够改变页面中的所有 HTML 元素
 - JavaScript 能够改变页面中的所有 HTML 属性

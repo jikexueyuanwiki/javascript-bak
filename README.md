@@ -7,6 +7,6 @@ JavaScript 是属于网络的脚本语言！被数百万计的网页用来改进
 所以我们撰写了一套完整的《JavaScript 权威教程》，并持续的更新和完善，让其成为每一个JavaScript 使用者不可或缺的参考文档，让大家少走弯路。
 
 ![Image of javascript]
-(https://github.com/sammulyuan/javascript/blob/master/images%20/javascript.jpg)
+(images/javascript.jpg)
 
 ps. 本篇权威教程还在不断完善，欢迎每一个人参与贡献。
