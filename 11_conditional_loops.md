@@ -1,5 +1,6 @@
 # JavaScript 条件语句和循环
-##JavaScript If...Else
+
+## JavaScript If...Else
 
 - **If 语句：**只有当指定条件为 true 时，该语句才会执行代码。
 
@@ -10,6 +11,7 @@ if (条件)
 }
 注意：请使用小写的 if。使用大写字母（IF）会生成 JavaScript 错误！
 ```
+
 - **If...else 语句：**如果条件为 true，则执行 if 段语句，若为 false 则执行 else 段语句，用法如下：
 
 ```
@@ -22,8 +24,9 @@ if (条件) {
 
 > 条件可以是任何结果值为 true 或 false 的 JavaScript 表达式，语句可以是任何可执行的 JavaScript 语句	
 		
-它还可以任意层地被嵌套，如果条件语句后面是单条语句，那么就不需要大括号 {}。请看下例代码：
-例：		
+它还可以任意层地被嵌套，如果条件语句后面是单条语句，那么就不需要大括号 {}。请看下例代码：		
+例：	
+	
 ```javascript
 <SCRIPT>
 function checkData () {
@@ -56,7 +59,9 @@ else
    当条件 1 和 条件 2 都不为 true 时执行的代码
 }
 ```
+
 ## JavaScript switch 语句
+
 
 - **switch 语句：**switch 语句允许程序给表达式求值，并用 case 标记来匹配表达式可能的值；如果匹配成立，程序将执行相应的语句，用法如下：
 
@@ -77,7 +82,8 @@ default : 语句;
 这意味着如果没有使用一个 break 语句，则多个 case 块被执行。
 	3. 如果没有 case 等于表达式的值，则跳转到 default；如果没有 default 情况，则跳转到最后一步；继续执行紧接 switch 代码块末尾的语句。
 	
-例：			
+例：
+			
 ```	javascript
 var day=new Date().getDay();					
 switch (day){					
@@ -104,6 +110,7 @@ case 6:
    break;			
 }			
 ```
+
 ## JavaScript for 循环
 
 - **for 语句：**一个 for 语句进行循环直到条件为 false，用法如下：
@@ -113,6 +120,7 @@ for ([初始表达式]; [条件]; [增量表达式]) {
      被执行的代码块；
 }
 ```
+
 **初始表达式：** 在循环（代码块）开始前执行，该表达式只在执行循环前被执行一次；	
 	
 > 初始表达式是可选的，也就是说不使用也可以，可以在初始表达式中初始化任意（或者多个）值		
@@ -139,6 +147,7 @@ for (i = 0; i < 10; i++)
 - **For/In 循环：**JavaScript for/in 语句循环遍历对象的属性：
 
 例:
+
 ```javascript
 var person={fname:"John",lname:"Doe",age:25};
 for (x in person)
@@ -171,10 +180,12 @@ do {
 > 首先执行一个语句块，然后重复循环的执行该语句块，直到条件表达式等于 false
 
 ## JavaScript Break 和 Continue 语句
+
 - **break 语句：**可用于跳出循环		
 break 语句跳出循环后，会继续执行该循环之后的代码（如果有的话）
 
-例:		
+例:
+		
 ```javascript
 for (i=0;i<10;i++)
 {
@@ -185,7 +196,8 @@ for (i=0;i<10;i++)
 
 - **Continue 语句：** continue 语句中断循环中的迭代，如果出现了指定的条件，然后继续循环中的下一个迭代。 
 
-例:				
+例:	
+			
 ``` javascript
 <script>		
 function myFunction(){		
@@ -199,6 +211,7 @@ function myFunction(){
 }		
 </script> 		
 ```
+
 输出后会跳过5执行		
 **continue 语句**（带有或不带标签引用）只能用在循环中。	
 **break 语句**（不带标签引用），只能用在循环或 switch 中。	

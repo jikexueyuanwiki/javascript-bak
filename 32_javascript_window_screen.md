@@ -1,4 +1,5 @@
 # JavaScript Window Screen
+
 **Window Screen：**window.screen 对象在编写时可以不使用 window 这个前缀。		
 
 ```

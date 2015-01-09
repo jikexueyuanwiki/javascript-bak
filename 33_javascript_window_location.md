@@ -1,4 +1,5 @@
 # JavaScript Window Location
+
 **Window Location：**window.location 对象在编写时可不使用 window 这个前缀。		
 
 ```          

@@ -1,5 +1,7 @@
 # JavaScript 保留字关键字
-## **关键字** 
+
+## 关键字 
+
 在javascript中，根据规定，关键字是保留的，不能用作变量名或函数名。
 
 break | delete | function | return | type
@@ -10,7 +12,8 @@ continue | finally | instance of | throw | while
 default | for | new | try | with
 
 
-## **保留字** 
+## 保留字 
+
 保留字在某种意义上是为将来的关键字而保留的单词。因此保留字不能被用作变量名或函数名。
  
 abstract | debugger | final | int | private | super

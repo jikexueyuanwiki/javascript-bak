@@ -1,8 +1,10 @@
 # DOM 事件监听
-## **添加监听**
+
+## 添加监听
+
 在JavaScript中，我们使用如下的方式为元素添加事件监听：
 
-```
+```javascript						
 element.addEventListener(<event-name>, <callback>, <use-capture>);
 ```
 
@@ -21,11 +23,12 @@ function callback() {
 // Add listener
 element.addEventListener('click', callback);
 ```
-## **移除监听**
+
+## 移除监听
 
 使用`element.removeEventListener()`方法来移除事件监听：
 
-```
+```javascript		
 element.removeEventListener(<event-name>, <callback>, <use-capture>);
 ```
 
@@ -34,7 +37,8 @@ element.removeEventListener(<event-name>, <callback>, <use-capture>);
          
 不能使用匿名函数作为回调函数。	
 		
-例：		
+例：
+		
 ```javacript
 var element = document.getElementById('element');
 function callback() {
