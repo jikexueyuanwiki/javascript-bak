@@ -1,9 +1,11 @@
 # JavaScript 输出
+
 可以使用 `document.getElementById(id)` 方法从 JavaScript 访问某个 HTML 元素；	
 	
 - 通过指定的 id 来访问 HTML 元素，并改变其内容：		
 	
-例：		
+例：	
+	
 ```javascript		
 <!DOCTYPE html>
 <html>
@@ -19,7 +21,8 @@ document.getElementById("demo").innerHTML="My First JavaScript";
 
 - 直接把 `<p>`元素写到 HTML 文档输出中：			
 	
-例：		
+例：	
+	
 ```javascript		
 <!DOCTYPE html>
 <html>

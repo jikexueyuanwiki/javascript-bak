@@ -1,4 +1,5 @@
 # JavaScript Window History
+
 **Window History：**window.history 对象在编写时可不使用 window 这个前缀。为了保护用户隐私，对 JavaScript 访问该对象的方法做出了限制。
 
 ```         

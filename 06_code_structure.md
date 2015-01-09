@@ -1,4 +1,5 @@
 # 了解JavaScript代码的结构
+
 - 通过在网页或工具中加入`<Script>…</Script>`标记JavaScript的开始和结束，将JavaScript代码放到`<Script>…</Script>`之间：
 
 ```
@@ -20,4 +21,5 @@
 ```	
 
 - 原则上，放在`<head></head>`和`<body></body>`之间。但视情况可以放在网页的任何部分；
+
 - 一个页面可以有几个`<Script>…</Script>` ，不同部分的方法和变量，可以共享。

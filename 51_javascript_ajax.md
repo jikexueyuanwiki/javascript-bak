@@ -1,14 +1,18 @@
 # JavaScript AJAX的使用
+
 **AJAX** 即“Asynchronous JavaScript and XML”（异步 JavaScript 和 XML），也就是无刷新数据读取。
 
-## **http 请求**		
+## http 请求
+		
 GET 用于获取数据。GET 是在 URL 中传递数据，它的安全性低，容量低。		
 POST 用于上传数据。POST 安全性一般，容量几乎无限。
 
-## **ajax 请求**	
+## ajax 请求	
 	
-ajax 请求一般分成 4 个步骤：		
+ajax 请求一般分成 4 个步骤：	
+	
 **1.创建 ajax 对象**		
+
 在创建对象时，有兼容问题：
 
 ```javascript
@@ -44,12 +48,13 @@ oAjax.open('GET', url, true);
 oAjax.send();
 ```
 
-**4.接收返回值**		
+**4.接收返回值**	
+	
 onreadystatechange 事件。当请求被发送到服务器时，我们需要执行一些基于响应的任务。
 
 每当 readyState 改变时，就会触发 onreadystatechange 事件。
 
- ```    
+```    
 readyState：请求状态，返回的是整数（0-4）。
   0（未初始化）：还没有调用 open() 方法。
   1（载入）：已调用 send() 方法，正在发送请求。
@@ -60,3 +65,4 @@ status：请求结果，返回 200 或者 404。
 200 => 成功。
 404 => 失败。
 ```
+

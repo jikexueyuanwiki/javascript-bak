@@ -4,17 +4,20 @@
 
 ```
 action 、elements、method、name、target  
-```   
+``` 
+  
 - 表单提交的方法：
 
 ```
 Get  Post   name    target           
 ```
+
 - 表示打开表单的url：
 
 ```
 _self    _parent    _blank    _top
 ```
+
 - 表单元素：
 
 ```
